@@ -7,45 +7,104 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Entre Linhas</title>
+    <title>Entre Linhas | Daia Albuquerque </title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <h1>Entre Linhas</h1>
-        <p>Crochê feito à mão, ponto por ponto.</p>
+        <img src="assets/logo.png" style="width: 520px; height: auto;" alt="Logo Entre Linhas" class="logo">
+        <p class="tagline">Onde o carinho ganha forma
+            Crochê feito à mão, ponto por ponto.
+        </p>
+
+        <nav class="menu">
+            <a href="#trabalhos">Trabalhos</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
     </header>
 
     <main>
 
-        <section>
+        <section id="trabalhos">
             <h2> Meus Trabalhos </h2>
             <p>
                 Conheça algumas peças feitas com carinho.
             </p>
 
+            <div class="galeria">
+
+                <article class="peca">
+                    <div class="peca-foto"></div>
+                    <!-- mudar div por <img class="peca-foto" src="assets/trabalhos/bolsa.jpg" alt="Bolsa granny colorida"> -->
+                    <h3>Tapete Colorido</h3>
+                    <p>Fio de malha, 5 peças</p>
+                </article>
+                <article class="peca">
+                    <div class="peca-foto"></div>
+                    <!-- mudar div por <img class="peca-foto" src="assets/trabalhos/bolsa.jpg" alt="Bolsa granny colorida"> -->
+                    <h3>Bolsa com Flores</h3>
+                    <p>Fio de malha, 3 peças</p>
+                </article>
+                <article class="peca">
+                    <div class="peca-foto"></div>
+                    <!-- mudar div por <img class="peca-foto" src="assets/trabalhos/bolsa.jpg" alt="Bolsa granny colorida"> -->
+                    <h3>Conjunto de Sousplat e Guardanapo</h3>
+                    <p>Fio de malha, 2 peças</p>
+                </article>
+                <article class="peca">
+                    <div class="peca-foto"></div>
+                    <!-- mudar div por <img class="peca-foto" src="assets/trabalhos/bolsa.jpg" alt="Bolsa granny colorida"> -->
+                    <h3>Tapete Redondo</h3>
+                    <p>Fio de malha, 4 peças</p>
+                </article>
+            </div>
+
         </section>
 
-        <section>
+        <section id="sobre">
             <h2> Sobre Mim </h2>
-            <p>
-                Sou uma artesã apaixonada por crochê, dedicando meu tempo a criar peças únicas e personalizadas. Cada
-                ponto é feito com cuidado e atenção aos detalhes, garantindo que cada trabalho seja especial.
-            </p>
+
+            <div class="sobre">
+                <div class="sobre-foto"></div>
+                <!-- mudar div por <img class="sobre-foto" src="assets/sobre-mim.jpg" alt="Foto da artesã"> -->
+
+                <p>
+                    Sou uma artesã apaixonada por crochê, dedicando meu tempo a criar peças únicas e personalizadas.
+                    Cada
+                    ponto é feito com cuidado e atenção aos detalhes, garantindo que cada trabalho seja especial.
+                </p>
+
+            </div>
         </section>
 
-        <section>
+        <section id="contato">
             <h2>Entre em contato</h2>
 
             <p>
-                Gostou de alguma peça? Entre em contato para saber mais.
+                Se você se interessou por alguma peça ou deseja encomendar algo personalizado, entre em contato
+                comigo. Estou à disposição para responder suas perguntas e ajudá-lo a encontrar a peça perfeita.
             </p>
 
-            <a href="#">
-                WhatsApp
-            </a>
+
+            <div class="contato-links">
+                <a href="https://wa.me/55NUMEROAQUI" class="btn-contato" target="_blank" rel="noopener">
+                    WhatsApp
+                </a>
+                <a href="https://instagram.com/entrelinhas_daiaalbuquerque" class="btn-contato" target="_blank"
+                    rel="noopener">
+                    Instagram
+                </a>
+            </div>
+
         </section>
 
     </main>
