@@ -6,7 +6,7 @@
     /* cores tiradas direto da logo do Instagram */
     --rosa: #F3DCD3;
     /* fundo do círculo da logo */
-    --terracota: #B85A34;
+    --terracota: #A65030;
     /* cor do fio e do texto da logo */
 
     /* verde novo */
@@ -142,6 +142,7 @@ footer {
 .peca-foto {
     display: block;
     width: 100%;
+    height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 12px;
