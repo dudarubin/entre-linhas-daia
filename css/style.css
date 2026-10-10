@@ -4,8 +4,10 @@
 
 :root {
     /* cores tiradas direto da logo do Instagram */
-    --rosa: #F3DCD3;       /* fundo do círculo da logo */
-    --terracota: #B85A34;  /* cor do fio e do texto da logo */
+    --rosa: #F3DCD3;
+    /* fundo do círculo da logo */
+    --terracota: #B85A34;
+    /* cor do fio e do texto da logo */
 
     /* verde novo */
     --verde: #4F6138;
@@ -23,6 +25,17 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 body {
     font-family: 'Karla', Arial, sans-serif;
     background: var(--creme);
@@ -30,7 +43,8 @@ body {
     line-height: 1.6;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: 'Fraunces', serif;
     font-weight: 500;
 }
@@ -63,6 +77,26 @@ header .tagline {
     color: var(--tinta-suave);
 }
 
+/* Menu de Navegação */
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin-top: 24px;
+}
+
+.menu a {
+    font-weight: 600;
+    text-decoration: none;
+    text-underline-offset: 6px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+
 /* ---------- CONTEÚDO ---------- */
 main {
     max-width: 900px;
@@ -81,6 +115,12 @@ h2 {
 
 a {
     color: var(--verde);
+}
+
+a:focus-visible {
+    outline: 3px solid var(--verde);
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
 footer {
@@ -127,7 +167,7 @@ footer {
 }
 
 .sobre {
-    display:flex;
+    display: flex;
     gap: 32px;
     align-items: center;
     margin-top: 20px;
