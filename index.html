@@ -56,32 +56,50 @@
             <div class="galeria">
 
                 <article class="peca">
-                    <img class="peca-foto" src="assets/urso.webp" alt="Urso de crochê feito à mão" width="800" height="1000" fetchpriority="high">
+                    <button type="button" class="peca-botao">
+                    <img class="peca-foto" src="assets/urso.webp" alt="Urso de crochê feito à mão" width="800"
+                        height="1000" fetchpriority="high">
+                    </button>
                     <h3>Urso de crochê</h3>
                     <p>Fio de malha, 1 peça</p>
                 </article>
                 <article class="peca">
-                    <img class="peca-foto" src="assets/casaco.webp" alt="Casaco de crochê feito à mão" width="800" height="1200">
+                    <button type="button" class="peca-botao">
+                    <img class="peca-foto" src="assets/casaco.webp" alt="Casaco de crochê feito à mão" width="800"
+                        height="1200">
+                    </button>
                     <h3>Casaco de crochê</h3>
                     <p>Fio de malha, 1 peça</p>
                 </article>
                 <article class="peca">
-                    <img class="peca-foto" src="assets/livro.webp" alt="Livro de crochê feito à mão" width="800" height="1421">
+                    <button type="button" class="peca-botao">
+                    <img class="peca-foto" src="assets/livro.webp" alt="Livro de crochê feito à mão" width="800"
+                        height="1421">
+                    </button>
                     <h3>Livro de crochê</h3>
                     <p>Fio de malha, 1 peça</p>
                 </article>
                 <article class="peca">
-                    <img class="peca-foto" src="assets/rendas.webp" alt="Rendas de crochê feitas à mão" width="800" height="1421" loading="lazy">
+                    <button type="button" class="peca-botao">
+                    <img class="peca-foto" src="assets/rendas.webp" alt="Rendas de crochê feitas à mão" width="800"
+                        height="1421" loading="lazy">
+                    </button>
                     <h3>Rendas de crochê</h3>
                     <p>Fio de malha, 1 peça</p>
                 </article>
                 <article class="peca">
-                    <img class="peca-foto" src="assets/bonecos.webp" alt="Bonecos de crochê feitos à mão" width="800" height="1200" loading="lazy">
+                    <button type="button" class="peca-botao">
+                    <img class="peca-foto" src="assets/bonecos.webp" alt="Bonecos de crochê feitos à mão" width="800"
+                        height="1200" loading="lazy">
+                    </button>
                     <h3>Bonecos de crochê</h3>
                     <p>Fio de malha, 1 peça</p>
                 </article>
                 <article class="peca">
-                    <img class="peca-foto" src="assets/bolsinha.webp" alt="Bolsinha de crochê feita à mão" width="800" height="1421" loading="lazy">
+                    <button type="button" class="peca-botao">
+                    <img class="peca-foto" src="assets/bolsinha.webp" alt="Bolsinha de crochê feita à mão" width="800"
+                        height="1421" loading="lazy">
+                    </button>
                     <h3>Bolsinha de crochê</h3>
                     <p>Fio de malha, 1 peça</p>
                 </article>
@@ -93,7 +111,8 @@
             <h2> Sobre Mim </h2>
 
             <div class="sobre">
-                <img class="sobre-foto" src="assets/daia.webp" width="800" height="796" alt="Daia Albuquerque, artesã da Entre Linhas, sorrindo" loading="lazy">
+                <img class="sobre-foto" src="assets/daia.webp" width="800" height="796"
+                    alt="Daia Albuquerque, artesã da Entre Linhas, sorrindo" loading="lazy">
 
                 <p>
                     Sou uma artesã apaixonada por crochê, dedicando meu tempo a criar peças únicas e personalizadas.
@@ -130,6 +149,14 @@
     <footer>
         <p>&copy; <span id="ano">2026</span> Entre Linhas. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- janela da foto ampliada -->
+    <dialog id="lightbox" class="lightbox">
+        <form method="dialog">
+            <button class="lightbox-fechar" aria-label="Fechar foto">&times;</button>
+        </form>
+        <img class="lightbox-foto" alt="">
+    </dialog>
 
     <script src="js/script.js"></script>
 

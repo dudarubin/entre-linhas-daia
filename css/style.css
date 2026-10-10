@@ -221,3 +221,50 @@ footer {
 .btn-contato:hover {
     background: var(--verde);
 }
+
+/* ---------- LIGHTBOX ---------- */
+
+.lightbox {
+    margin: auto; /* devolve a centralização que o reset * tirou */
+    padding: 0;
+    border: none;
+    background: transparent;
+    overflow: visible;
+}
+
+.lightbox::backdrop {
+    background: color-mix(in srgb, var(--tinta) 85%, transparent);
+}
+
+.lightbox-foto {
+    display: block;
+    max-width: 90vw;
+    max-height: 85vh;
+    border-radius: 12px;
+}
+
+.lightbox-fechar {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: var(--creme);
+    color: var(--tinta);
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* botão que abre o lightbox */
+.peca-botao {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+    border-radius: 12px;
+    cursor: zoom-in;
+}
