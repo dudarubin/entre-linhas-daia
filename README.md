@@ -2,7 +2,7 @@
 
 Site vitrine da **Entre Linhas**, marca de crochê feito à mão da artesã **Daia Albuquerque**.
 
-🔗 **Site ao vivo:** em breve
+🔗 **Site ao vivo:** [dudarubin.github.io/entre-linhas-daia](https://dudarubin.github.io/entre-linhas-daia/)
 
 ## Sobre o projeto
 
