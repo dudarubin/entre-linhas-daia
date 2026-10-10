@@ -58,10 +58,11 @@ header {
 }
 
 header .logo {
+    display: block;
     width: 100%;
     max-width: 520px;
     height: auto;
-    margin-bottom: 18px;
+    margin: 0 auto 18px;
 }
 
 header h1 {
