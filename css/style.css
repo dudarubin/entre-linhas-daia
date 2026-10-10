@@ -208,7 +208,9 @@ footer {
 }
 
 .btn-contato {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     padding: 12px 24px;
     background: var(--terracota);
     color: var(--creme);
@@ -220,6 +222,12 @@ footer {
 
 .btn-contato:hover {
     background: var(--verde);
+}
+
+.icone {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
 }
 
 /* ---------- LIGHTBOX ---------- */

@@ -72,7 +72,7 @@ Não precisa instalar nada.
 entre-linhas-daia/
 ├── index.html      # página única
 ├── css/style.css   # estilos
-├── js/script.js    # ano automático no rodapé
+├── js/script.js    # ano automático e lightbox
 └── assets/         # logo, favicon e fotos das peças
 ```
 
