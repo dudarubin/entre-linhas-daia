@@ -8,7 +8,7 @@ const lightbox = document.getElementById('lightbox');
 const fotoAmpliada = document.createElement('img');
 fotoAmpliada.className = 'lightbox-foto';
 lightbox.append(fotoAmpliada);
-const fotoAmpliada = lightbox.querySelector('.lightbox-foto');
+//const fotoAmpliada = lightbox.querySelector('.lightbox-foto');
 const botoesFoto = document.querySelectorAll('.peca-botao');
 
 botoesFoto.forEach(function (botao) {
