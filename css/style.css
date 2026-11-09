@@ -9,7 +9,7 @@
     --terracota: #A65030;
     /* cor do fio e do texto da logo */
 
-    /* verde novo */
+    /* verde */
     --verde: #4F6138;
 
     /* base neutra */
@@ -203,6 +203,7 @@ footer {
 
 .contato-links {
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
     margin-top: 20px;
     justify-content: center;
