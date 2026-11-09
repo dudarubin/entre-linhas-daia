@@ -55,9 +55,17 @@
                 Conheça algumas peças feitas com carinho.
             </p>
 
+            <div class="filtros" role="group" aria-label="Filtrar trabalhos por categoria">
+                <button type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+                <button type="button" data-filtro="acessorios" aria-pressed="false">Acessórios</button>
+                <button type="button" data-filtro="amigurumis" aria-pressed="false">Amigurumis</button>
+                <button type="button" data-filtro="decoracao" aria-pressed="false">Decoração</button>
+                <button type="button" data-filtro="vestuario" aria-pressed="false">Vestuário</button>
+            </div>
+
             <div class="galeria">
 
-                <article class="peca">
+                <article class="peca" data-categoria="amigurumis">
                     <button type="button" class="peca-botao">
                         <img class="peca-foto" src="assets/urso.webp" alt="Urso de crochê feito à mão" width="800"
                             height="1000" fetchpriority="high">
@@ -65,7 +73,7 @@
                     <h3>Urso de crochê</h3>
                     <p>Fio de malha, 1 peça</p>
                 </article>
-                <article class="peca">
+                <article class="peca" data-categoria="vestuario">
                     <button type="button" class="peca-botao">
                         <img class="peca-foto" src="assets/casaco.webp" alt="Casaco de crochê feito à mão" width="800"
                             height="1200">
@@ -73,7 +81,7 @@
                     <h3>Casaco de crochê</h3>
                     <p>Fio de malha, 1 peça</p>
                 </article>
-                <article class="peca">
+                <article class="peca" data-categoria="acessorios">
                     <button type="button" class="peca-botao">
                         <img class="peca-foto" src="assets/livro.webp" alt="Livro de crochê feito à mão" width="800"
                             height="1421">
@@ -81,7 +89,7 @@
                     <h3>Livro de crochê</h3>
                     <p>Fio de malha, 1 peça</p>
                 </article>
-                <article class="peca">
+                <article class="peca" data-categoria="decoracao">
                     <button type="button" class="peca-botao">
                         <img class="peca-foto" src="assets/rendas.webp" alt="Rendas de crochê feitas à mão" width="800"
                             height="1421" loading="lazy">
@@ -89,7 +97,7 @@
                     <h3>Rendas de crochê</h3>
                     <p>Fio de malha, 1 peça</p>
                 </article>
-                <article class="peca">
+                <article class="peca" data-categoria="amigurumis">
                     <button type="button" class="peca-botao">
                         <img class="peca-foto" src="assets/bonecos.webp" alt="Bonecos de crochê feitos à mão"
                             width="800" height="1200" loading="lazy">
@@ -97,10 +105,10 @@
                     <h3>Bonecos de crochê</h3>
                     <p>Fio de malha, 1 peça</p>
                 </article>
-                <article class="peca">
-                    <button type="button" class="peca-botao">
-                        <img class="peca-foto" src="assets/bolsinha.webp" alt="Bolsinha de crochê feita à mão"
-                            width="800" height="1421" loading="lazy">
+                <article class="peca" data-categoria="acessorios>
+                    <button type=" button" class="peca-botao">
+                    <img class="peca-foto" src="assets/bolsinha.webp" alt="Bolsinha de crochê feita à mão" width="800"
+                        height="1421" loading="lazy">
                     </button>
                     <h3>Bolsinha de crochê</h3>
                     <p>Fio de malha, 1 peça</p>
@@ -165,10 +173,10 @@
 
     <!-- janela da foto ampliada -->
     <dialog id="lightbox" class="lightbox" aria-label="Foto ampliada da peça">
-    <form method="dialog">
-        <button class="lightbox-fechar" aria-label="Fechar foto">&times;</button>
-    </form>
-</dialog>
+        <form method="dialog">
+            <button class="lightbox-fechar" aria-label="Fechar foto">&times;</button>
+        </form>
+    </dialog>
 
     <script src="js/script.js"></script>
 
