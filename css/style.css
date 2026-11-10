@@ -312,3 +312,10 @@ footer {
     outline: 3px solid var(--verde);
     outline-offset: 4px;
 }
+
+#resultado-filtro {
+    margin-top: 16px;
+    color: var(--tinta-suave);
+    font-size: 0.9rem;
+    text-align: center;
+}
