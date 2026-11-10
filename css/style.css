@@ -50,44 +50,52 @@ h2 {
 }
 
 /* ---------- CABEÇALHO ---------- */
-header {
-    text-align: center;
-    padding: 56px 20px 44px;
-    background: var(--rosa);
+
+.cabecalho {
+    display: grid;
+    grid-template-areas:
+        "marca marca"
+        "esquerda direita";
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+    background: var(--creme);
     border-bottom: 1px solid var(--linha);
 }
 
-header .logo {
+.marca {
+    grid-area: marca;
+    margin: 0;
+    line-height: 1;
+}
+
+.cabecalho .logo {
     display: block;
     width: 100%;
-    max-width: 520px;
+    max-width: 280px;
     height: auto;
-    margin: 0 auto 18px;
+    margin: 0 auto;
 }
 
-header h1 {
-    font-size: 2.4rem;
-    color: var(--terracota);
-}
-
-header .tagline {
-    margin-top: 8px;
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-size: 1.1rem;
-    color: var(--tinta-suave);
-}
-
-/* Menu de Navegação */
 .menu {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 28px;
-    margin-top: 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.menu-esquerda {
+    grid-area: esquerda;
+}
+
+.menu-direita {
+    grid-area: direita;
 }
 
 .menu a {
+    color: var(--tinta);
     font-weight: 600;
     text-decoration: none;
     text-underline-offset: 6px;
@@ -97,12 +105,27 @@ header .tagline {
     text-decoration: underline;
 }
 
+@media (min-width: 900px) {
+    .cabecalho {
+        grid-template-areas: "esquerda marca direita";
+        grid-template-columns: 1fr 320px 1fr;
+        padding: 20px 32px;
+    }
+
+    .cabecalho .logo {
+        max-width: 320px;
+    }
+
+    .menu {
+        gap: 24px;
+    }
+}
 
 /* ---------- CONTEÚDO ---------- */
 main {
-    max-width: 900px;
+    max-width: 1120px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 24px;
 }
 
 section {
@@ -131,11 +154,144 @@ footer {
     font-size: 0.9rem;
 }
 
+/* ---------- APRESENTAÇÃO ---------- */
+
+.apresentacao {
+    padding: 32px 0;
+    display: grid;
+    gap: 32px;
+    align-items: center;
+}
+
+.apresentacao-foto {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.apresentacao-conteudo {
+    max-width: 560px;
+}
+
+.apresentacao h2 {
+    margin-bottom: 20px;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1.1;
+    color: var(--tinta);
+}
+
+.apresentacao p {
+    max-width: 440px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.apresentacao-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.apresentacao-links .btn-contato {
+    justify-content: center;
+    border-radius: 18px;
+}
+
+.apresentacao-links .btn-contato:first-child {
+    background: var(--verde);
+}
+
+.apresentacao-links .btn-contato:hover {
+    background: var(--tinta);
+}
+
+@media (min-width: 900px) {
+    .apresentacao {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 0;
+        overflow: hidden;
+        border-radius: 24px;
+        background: var(--creme);
+        isolation: isolate;
+    }
+
+    .apresentacao-foto {
+        grid-area: 1 / 1;
+        width: 100%;
+        height: 100%;
+        min-height: 480px;
+        aspect-ratio: auto;
+        object-fit: cover;
+        border-radius: 0;
+        z-index: 0;
+    }
+
+    .apresentacao::before {
+        content: "";
+        grid-area: 1 / 1;
+        align-self: stretch;
+        background: linear-gradient(
+            to right,
+            var(--creme) 0%,
+            var(--creme) 35%,
+            transparent 85%
+        );
+        z-index: 1;
+    }
+
+    .apresentacao-conteudo {
+        grid-area: 1 / 1;
+        max-width: 600px;
+        padding: 48px;
+        z-index: 2;
+    }
+}
+
+/* ---------- DIFERENCIAIS (parte de baixo de apresentação) ---------- */
+
+.diferenciais {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    list-style: none;
+    padding: 24px;
+    margin-bottom: 48px;
+    border-radius: 24px;
+    background: var(--rosa);
+}
+
+.diferenciais li {
+    padding: 8px;
+    text-align: center;
+    font-weight: 500;
+}
+
+@media (min-width: 600px) {
+    .diferenciais {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .diferenciais {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .diferenciais li + li {
+        border-left: 1px solid var(--terracota);
+    }
+}
+
 /* ---------- GALERIA DE TRABALHOS ---------- */
 
 .galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 24px;
     margin-top: 30px;
 }
@@ -161,40 +317,69 @@ footer {
     color: var(--tinta-suave);
 }
 
-/* ---------- SOBRE MIM ---------- */
-
-
-#sobre h2 {
+#trabalhos > h2 {
+    margin-bottom: 8px;
     text-align: center;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
 
-.sobre {
-    display: flex;
-    gap: 32px;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.sobre-foto {
-    width: 200px;
-    height: 200px;
-    flex-shrink: 0;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--terracota);
-}
-
-.sobre p {
+.trabalhos-introducao {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
     color: var(--tinta-suave);
 }
 
-@media (max-width: 600px) {
-    .sobre {
-        flex-direction: column;
-        text-align: center;
-    }
+/* ---------- SOBRE MIM ---------- */
+
+#sobre {
+    padding: 28px 20px;
+    border-radius: 24px;
+    background: var(--rosa);
 }
 
+.sobre {
+    display: grid;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
+}
+
+.sobre-foto {
+    display: block;
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.sobre-conteudo h2 {
+    margin-bottom: 12px;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.sobre-conteudo p {
+    color: var(--tinta);
+}
+
+@media (min-width: 700px) {
+    #sobre {
+        padding: 32px;
+    }
+
+    .sobre {
+        grid-template-columns: 200px 1fr;
+        gap: 32px;
+        text-align: left;
+    }
+
+    .sobre-foto {
+        width: 200px;
+    }
+}
 /* ---------- CONTATO ---------- */
 
 #contato {
@@ -235,7 +420,8 @@ footer {
 /* ---------- LIGHTBOX ---------- */
 
 .lightbox {
-    margin: auto; /* devolve a centralização que o reset * tirou */
+    margin: auto;
+    /* devolve a centralização que o reset * tirou */
     padding: 0;
     border: none;
     background: transparent;
