@@ -28,6 +28,8 @@ Projeto pessoal, feito do zero por mim, sem frameworks, para praticar os fundame
 - Rolagem suave que respeita a preferência de movimento reduzido do sistema
 - Ano do rodapé atualizado automaticamente com JavaScript
 - Favicon, meta description e prévia do link no WhatsApp (Open Graph)
+- Filtros por categoria, com indicação do filtro selecionado
+- Galeria que mantém o tamanho das peças ao alternar os filtros
 
 ## O que aprendi nesse projeto
 
@@ -42,6 +44,16 @@ Projeto pessoal, feito do zero por mim, sem frameworks, para praticar os fundame
 - **Eventos no JavaScript:** `addEventListener`, o objeto do evento e o borbulhamento, que usei para fechar o lightbox só quando o clique é fora da foto (`evento.target`).
 - **Acessibilidade na prática:** tudo o que faz uma ação deve ser um `<button>`; `:focus-visible` mostra o foco só para quem usa teclado; e texto pequeno precisa de mais contraste que texto grande.
 - **Medir antes de otimizar:** usar o Lighthouse para descobrir os problemas reais, em vez de adivinhar.
+- **Grid responsivo:** uso de `repeat(auto-fill, minmax(220px, 1fr))`
+  para distribuir as peças conforme o espaço disponível. Escolhi
+  `auto-fill` para manter as colunas mesmo quando o filtro mostra
+  poucas peças, evitando que as imagens aumentem.
+  - **Atributos `data-*`:** guardar categorias no HTML e acessá-las
+  no JavaScript com `dataset`.
+- **Filtros com JavaScript:** comparar a categoria de cada peça
+  com o filtro escolhido e controlar sua visibilidade com `hidden`.
+- **Estado dos botões:** atualizar `aria-pressed` para informar
+  a seleção às tecnologias assistivas e aplicar o estilo pelo CSS.
 
 ## Desempenho e acessibilidade
 
